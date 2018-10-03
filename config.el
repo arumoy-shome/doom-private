@@ -12,6 +12,9 @@
 
 ;; org
 (setq org-ellipsis " ▼ ")
+(setq agenda-files (directory-files-recursively "~/Google Drive/masters/semester-1/" "todo.org$"))
+(add-to-list 'agenda-files (expand-file-name "todo.org" org-directory))
+(setq org-agenda-files agenda-files)
 
 ;; latex
 (set! :latex-bibtex-file "./references.bib")
