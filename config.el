@@ -5,6 +5,10 @@
 (setq doom-font (font-spec :family "Source Code Pro" :size 13 :weight 'light))
 (setq doom-big-font (font-spec :family "Source Code Pro" :size 15 :weight 'normal))
 (setq doom-line-numbers-style nil)
+(setq ns-use-thin-smoothing t)
+(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+(add-to-list 'default-frame-alist '(ns-appearance . dark))
+(add-hook 'window-setup-hook #'toggle-frame-maximized)
 
 ;; org
 (setq org-ellipsis " ▼ ")
