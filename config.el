@@ -22,6 +22,9 @@
 ;; editing
 (add-hook! text-mode 'auto-fill-mode)
 
+;; deft
+(setq deft-directory org-directory)
+
 ;; keybindings
 (map!
  :n "C-h"   #'evil-window-left
