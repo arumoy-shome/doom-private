@@ -59,4 +59,12 @@
  (:after treemacs-evil
    (:map evil-treemacs-state-map
      "C-h" #'evil-window-left
-     "C-l" #'evil-window-right)))
+     "C-l" #'evil-window-right))
+
+(:leader
+   (:prefix "f"
+     :desc "Find file in dotfiles" :n "t" #'+aru/find-in-dotfiles
+     :desc "Browse dotfiles"       :n "T" #'+aru/browse-dotfiles)
+   (:prefix "n"
+     :desc "Browse mode notes"     :n  "m" #'+aru/find-notes-for-major-mode
+     :desc "Browse project notes"  :n  "p" #'+aru/find-notes-for-project)))
