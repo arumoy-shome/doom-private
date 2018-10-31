@@ -38,6 +38,17 @@
 ;; multi-term
 (setq multi-term-program "/usr/local/bin/fish")
 
+;; eshell
+(after! eshell
+  (set-eshell-alias!
+   "f"   "find-file $1"
+   "l"   "ls -lh"
+   "d"   "dired $1"
+   "gl"  "(call-interactively 'magit-log-current)"
+   "gs"  "magit-status"
+   "gc"  "magit-commit"
+   "rg"  "rg --color=always $*"))
+
 ;; keybindings
 (map!
  :n "C-h"   #'evil-window-left
