@@ -1,8 +1,16 @@
 ;;; private/aru/config.el -*- lexical-binding: t; -*-
 
+(add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
+
 (set-default
  user-full-name "Arumoy Shome"
  user-mail-address "arumoy.shome@gmail.com"
+
++workspaces-switch-project-function #'ignore)
+
+(add-to-list 'org-modules 'org-habit t)
+
+
 ;; ui
 (setq doom-theme 'doom-tomorrow-night)
 (setq doom-font (font-spec :family "Source Code Pro" :size 13 :weight 'light))
