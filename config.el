@@ -35,6 +35,9 @@
 ;; deft
 (setq deft-directory org-directory)
 
+;; multi-term
+(setq multi-term-program "/usr/local/bin/fish")
+
 ;; keybindings
 (map!
  :n "C-h"   #'evil-window-left
