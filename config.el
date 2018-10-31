@@ -22,10 +22,9 @@
 (add-hook 'window-setup-hook #'toggle-frame-maximized)
 
 ;; org
-(setq org-ellipsis " ▼ ")
-(setq agenda-files (directory-files-recursively "~/Google Drive/masters/semester-1/" "todo.org$"))
-(add-to-list 'agenda-files (expand-file-name "todo.org" org-directory))
-(setq org-agenda-files agenda-files)
+(setq
+ org-agenda-files (list org-directory)
+ org-ellipsis " ▼ ")
 
 ;; latex
 (set! :latex-bibtex-file "./references.bib")
